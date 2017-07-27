@@ -1,5 +1,10 @@
-export {
+import Helper from './components/Helper'
+import Helpers from './components/Helpers'
+
+export { Helper,
+  Helpers
 }
-const transactionsReduxReselector = {
+const transactionsTooltipHelp = { Helper,
+  Helpers
 }
-export default transactionsReduxReselector
+export default transactionsTooltipHelp

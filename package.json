@@ -2,7 +2,8 @@
   "ava": {
     "babel": {
       "presets": [
-        "latest"
+        "latest",
+        "react"
       ]
     },
     "require": [
@@ -12,24 +13,33 @@
   },
   "author": "Erwan Ledoux",
   "dependencies": {
+    "classnames": "2.2.5",
+    "react": "^15.5.4",
+		"react-dom": "^15.5.4",
     "react-portal-tooltip": "^1.1.5",
+    "transactions-interface-state": "latest",
+    "transactions-interface-web": "latest"
   },
   "description": "Little react uis based on react-portal-tip that helps to add a discover tutorial to your website",
   "devDependencies": {
     "ava": "^0.18.2",
     "babel-cli": "^6.24.1",
     "babel-preset-latest": "^6.24.1",
+    "babel-preset-react": "^6.22.0",
+    "concurrently": "^3.1.0",
     "nodemon": "^1.11.0",
+    "node-sass": "^4.5.3",
     "standard": "^7.0.1"
   },
   "license": "MIT",
   "main": "lib/index.js",
   "name": "transactions-tooltip-help",
   "scripts": {
-    "compile": "babel --presets latest -d lib/ src/",
+    "compile": "babel --presets latest,react -d lib/ src/",
     "test": "ava -v",
-    "dev": "npm run dev",
-    "dev-watch": "nodemon src/index.js --watch src --exec \"npm run compile\""
+    "dev-watch-sass": "node-sass -w src/styles -o lib/styles src/styles/index.scss",
+    "dev-watch-js": "nodemon --watch src --ignore src/styles --exec \"npm run compile\"",
+    "dev-watch": "concurrently \"npm run dev-watch-js\" \"npm run dev-watch-sass\""
   },
   "version": "0.0.1"
 }

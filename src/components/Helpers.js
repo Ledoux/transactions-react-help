@@ -1,9 +1,7 @@
 import React, { Component } from 'react'
+const { getUpdatedSearchString } = require('../utils/navigation').default
 
 import Helper from './Helper'
-import { history } from '../containers/Root'
-import helpersByCollectionName from '../utils/helpers'
-import { getUpdatedSearchString } from '../utils/navigation'
 
 class Helpers extends Component {
   constructor () {
@@ -36,6 +34,8 @@ class Helpers extends Component {
   }
   render () {
     const { collectionName,
+      helpersByCollectionName,
+      history,
       pathname,
       stepIndex
     } = this.props
@@ -76,6 +76,10 @@ class Helpers extends Component {
       }
     </div>)
   }
+}
+
+Helpers.helpersByCollectionName = {
+  helpersByCollectionName: {}
 }
 
 export default Helpers

@@ -1,9 +1,7 @@
 import classnames from 'classnames'
 import ToolTip from 'react-portal-tooltip'
 import React, { Component } from 'react'
-
-import Button from './Button'
-import { IS_FIREFOX } from '../utils/config'
+import { Button } from 'transactions-interface-web'
 
 class Helper extends Component {
   constructor () {
@@ -51,6 +49,7 @@ class Helper extends Component {
   }
   componentDidUpdate (prevProps) {
     const { active,
+      isFirefox,
       position,
       stepIndex
     } = this.props
@@ -62,7 +61,7 @@ class Helper extends Component {
       this.getHelperElement().then(helperElement => {
         // as this is an absolute positioned
         // element, it will not work in Firefox
-        const scrollElement = IS_FIREFOX ? parentElement : this.helperElement
+        const scrollElement = isFirefox ? parentElement : this.helperElement
         scrollElement.scrollIntoView({
             behavior: 'smooth',
             block: position === 'top' ? 'end' : 'start'
