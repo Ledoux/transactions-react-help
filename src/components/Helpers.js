@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-const { getUpdatedSearchString } = require('../utils/navigation').default
+const { getUpdatedSearchString } = require('transactions-interface-state').default
 
 import Helper from './Helper'
 
