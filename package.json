@@ -33,7 +33,7 @@
   },
   "license": "MIT",
   "main": "lib/index.js",
-  "name": "transactions-tooltip-help",
+  "name": "transactions-tooltip-web",
   "scripts": {
     "compile": "babel --presets latest,react -d lib/ src/",
     "test": "ava -v",
@@ -41,5 +41,5 @@
     "dev-watch-js": "nodemon --watch src --ignore src/styles --exec \"npm run compile\"",
     "dev-watch": "concurrently \"npm run dev-watch-js\" \"npm run dev-watch-sass\""
   },
-  "version": "0.0.2"
+  "version": "0.0.1"
 }
