@@ -18,7 +18,8 @@
 		"react-dom": "^15.5.4",
     "react-portal-tooltip": "^1.1.5",
     "transactions-interface-state": "latest",
-    "transactions-interface-web": "latest"
+    "transactions-interface-web": "latest",
+    "transactions-tooltip-state": "latest"
   },
   "description": "Little react uis based on react-portal-tip that helps to add a discover tutorial to your website",
   "devDependencies": {
@@ -37,8 +38,8 @@
   "scripts": {
     "compile": "babel --presets latest,react -d lib/ src/",
     "test": "ava -v",
-    "dev-watch-sass": "node-sass -w src/styles -o lib/styles src/styles/index.scss",
-    "dev-watch-js": "nodemon --watch src --ignore src/styles --exec \"npm run compile\"",
+    "dev-watch-sass": "node-sass -w styles -o styles styles/index.scss",
+    "dev-watch-js": "nodemon --watch src --ignore styles --exec \"npm run compile\"",
     "dev-watch": "concurrently \"npm run dev-watch-js\" \"npm run dev-watch-sass\""
   },
   "version": "0.0.1"
