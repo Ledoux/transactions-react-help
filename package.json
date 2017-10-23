@@ -14,8 +14,7 @@
   "author": "Erwan Ledoux",
   "dependencies": {
     "classnames": "2.2.5",
-    "react": "^15.5.4",
-		"react-dom": "^15.5.4",
+    "react": "^16.0.0",
     "react-portal-tooltip": "^1.1.5",
     "transactions-interface-state": "latest",
     "transactions-interface-web": "latest",
