@@ -1,6 +1,10 @@
+import Guide from './Guide'
 import Helper from './Helper'
+import Part from './Part'
 import Tutorial from './Tutorial'
 
-export { Helper,
+export { Guide,
+  Helper,
+  Part,
   Tutorial
 }

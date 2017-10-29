@@ -28,6 +28,7 @@ const Helper = ({ active,
     }
     // const isPreviousButton = stepIndex !== 0
     const isPreviousButton = false
+    console.log('BEN ALORS', active, parent, position, arrow)
     return (
       <ToolTip active={active}
         arrow={arrow}
@@ -40,28 +41,25 @@ const Helper = ({ active,
           <div className='helper__child'>
             <ChildComponent {...childProps} />
           </div>
-          <div className={classnames('helper__interaction', {
+          <div className={classnames('helper__interaction flex items-center justify-center', {
             'helper__interaction--large': isPreviousButton
           })}>
             {
               isPreviousButton && (
-                <div className='helper__interaction__previous col'>
-                  <Button
-                    className='button helper__interaction__previous__button'
-                    onClick={() => onPreviousClick(stepIndex)}
-                  >
+                <div className='helper__interaction__previous'>
+                  <Button className='button helper__interaction__previous__button'
+                    onClick={() => onPreviousClick(stepIndex)}>
                     Previous
                   </Button>
                 </div>
               )
             }
-            <div className='helper__interaction__next col'>
-              <Button
-                className='button helper__interaction__next__button'
+            <div className='helper__interaction__next'>
+              <Button className='button helper__interaction__next__button'
                 onClick={() => {
                   onNextClick(stepIndex)
                   if (isLast) {
-                    handleStepReset()
+                    handleStepReset && handleStepReset()
                   }
                 }} >
                 { text || 'Next' }

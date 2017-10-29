@@ -1,18 +1,23 @@
 .helper {
-  background-color: $pastel-blue;
+  background-color: rgba(153, 214, 230, 0.9);
   border-radius: $border-radius;
   color: white;
   font-family: $font-family;
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 500;
-  padding: 1rem;
-  width: 20rem;
+  padding: 0.25rem;
+  text-align: center;
+  width: 6rem;
+  @media (min-width: $md) {
+    font-size: 16px;
+    padding: 1rem;
+    text-align: left;
+    width: 20rem;
+  }
   &__child {
     margin-bottom: 0.5rem;
   }
   &__interaction {
-    width: 30%;
-    margin: 0 auto;
     overflow-y: hidden;
     &--large {
       width: 60%;

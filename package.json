@@ -15,7 +15,7 @@
   "dependencies": {
     "classnames": "2.2.5",
     "react": "^16.0.0",
-    "react-portal-tooltip": "^1.1.5",
+    "react-portal-tooltip": "^2.1.0",
     "transactions-interface-state": "latest",
     "transactions-interface-web": "latest",
     "transactions-tooltip-state": "latest"
@@ -41,5 +41,5 @@
     "dev-watch-js": "nodemon --watch src --ignore styles --exec \"npm run compile\"",
     "dev-watch": "concurrently \"npm run dev-watch-js\" \"npm run dev-watch-sass\""
   },
-  "version": "0.0.3"
+  "version": "0.0.4"
 }
