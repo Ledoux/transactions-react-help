@@ -1,4 +1,4 @@
-# transactions-redux-reselector
+# transactions-tooltip-web
 [![npm version](https://badge.fury.io/js/transactions-redux-reselector.svg)](https://badge.fury.io/js/transactions-redux-reselector)
 
 <table>

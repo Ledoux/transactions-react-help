@@ -1,9 +1,10 @@
 import React from 'react'
-import { Part as withState } from 'transactions-tooltip-state'
+import { PartContent as withState } from 'transactions-tooltip-state'
 
-import Helper from './Helper'
+import HelperContent from './HelperContent'
 
-const Part = ({ collectionName,
+const PartContent = ({ collectionName,
+  decoration,
   handleStepReset,
   onNextClick,
   onPreviousClick,
@@ -21,16 +22,20 @@ const Part = ({ collectionName,
             (visibleHelper.stepIndex === stepIndex - 1)
           // then we add the global condition
           isActive = visibleHelper.stepIndex === stepIndex
-          return !isForceDisappear && <Helper active={isActive}
-            key={index}
-            handleStepReset={handleStepReset}
-            onNextClick={onNextClick}
-            onPreviousClick={onPreviousClick}
-            {...visibleHelper} />
+          return !isForceDisappear && (
+            <HelperContent active={isActive}
+              decoration={decoration}
+              key={index}
+              handleStepReset={handleStepReset}
+              onNextClick={onNextClick}
+              onPreviousClick={onPreviousClick}
+              {...visibleHelper}
+            />
+          )
         })
       }
     </div>
   )
 }
 
-export default withState(Part)
+export default withState(PartContent)
